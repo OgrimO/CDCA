@@ -43,16 +43,3 @@ python CDCA.py --dataset=ogbn-arxiv --vs_number=565 --trojan_epochs=400 --hidden
 
 @echo off
 setlocal enabledelayedexpansion
-
-#set PY=*
-#Hyper-parameter
-  for beta in 0 0.05 0.1 0.2 0.5 1 2 3 4 5 6 7 8 9 10; do
-    echo ">>> Running with beta=$beta"
-      for gamma in 0 0.05 0.1 0.2 0.5 1 2 3 4 5 6 7 8 9 10; do
-        echo ">>> Running with gamma=$gamma"
-        %PY% UGBA_LoSplit.py --dataset=Pubmed --vs_number=90 --epochs=400 --loss_2hop_weight=$beta --loss_2hop_suppress_weight=$gamma --homo_loss_weight=0 --neighbor_suppress_hops=1 --selection_method=target_cluster_distance --layer=3
-      done
-  done
-
-
-  endlocal
