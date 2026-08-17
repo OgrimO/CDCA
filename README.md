@@ -1,4 +1,4 @@
-# CDCA
+# Collateral Damage Constrained Backdoor Attacks on Graph Neural Networks [IJCAI26]
 Offical implementation of CDCA
 
 To reproduce the results reported in the paper, run the scripts [backdoor.sh](CDCA/backdoor.sh)
